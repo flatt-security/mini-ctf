@@ -1,5 +1,5 @@
 import { serve } from "@hono/node-server";
-import depthLimit from "graphql-depth-limit";
+import { serveStatic } from "@hono/node-server/serve-static";
 import {
   createComplexityRule,
   fieldExtensionsEstimator,
@@ -7,6 +7,7 @@ import {
 } from "graphql-query-complexity";
 import { Hono } from "hono";
 import "reflect-metadata";
+import { depthLimit } from "./graphql-depth-limit.js";
 import { schema } from "./graphql.js";
 import { createHandler } from "./middleware.js";
 import {
@@ -18,7 +19,7 @@ import {
 } from "./util.js";
 import { querySizeLimit, validatePaginationArgument } from "./validator.js";
 
-const QUERY_SIZE_LIMIT = 500;
+const QUERY_SIZE_LIMIT = 1700;
 const DEPTH_LIMIT = 2;
 const PAGINATION_MAX_VALUE = 10;
 const COMPLEXITY_LIMIT = 100;
@@ -108,7 +109,7 @@ app.use(
   })
 );
 
-app.get("/", (c) => c.redirect("/graphql"));
+app.use("/", serveStatic({ path: "./static" }));
 
 serve({
   fetch: app.fetch,

@@ -6,6 +6,7 @@ COPY package.json yarn.lock ./
 RUN yarn install --immutable && yarn cache clean
 
 COPY database.db tsconfig.json ./
+COPY static ./static
 COPY src ./src
 
 RUN useradd -u 1001 -m ctf

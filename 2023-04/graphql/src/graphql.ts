@@ -172,6 +172,7 @@ function makeUser(row: any) {
   const user = new User();
   user.id = row.id;
   user.name = row.name;
+  user.parentId = row.parent_id;
   return user;
 }
 
