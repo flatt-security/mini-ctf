@@ -1,0 +1,13 @@
+name: dos
+description: |-
+  配布物とサーバはwelcomeと同じです。flag3を取得してください。
+section: GraphQL
+category:
+  - web
+subCategory:
+difficulty: medium
+author: akiym
+releasedAt: 2023-04-26T19:35:00+09:00
+flag:
+  flag: 'flag{flag3__my_implementation_is_so_bad_7Mam37}'
+  points: 300

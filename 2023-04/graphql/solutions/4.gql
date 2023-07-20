@@ -1,0 +1,9 @@
+{
+  getFlag {
+    ...A
+  }
+}
+
+fragment A on Flag {
+  ...A
+}

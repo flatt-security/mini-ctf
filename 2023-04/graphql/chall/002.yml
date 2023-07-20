@@ -1,0 +1,13 @@
+name: complexity
+description: |-
+  配布物とサーバはwelcomeと同じです。flag2を取得してください。
+section: GraphQL
+category:
+  - web
+subCategory:
+difficulty: easy
+author: akiym
+releasedAt: 2023-04-26T19:35:00+09:00
+flag:
+  flag: 'flag{flag2__complexity_is_not_complex_eF3Qzy}'
+  points: 200

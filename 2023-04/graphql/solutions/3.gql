@@ -1,0 +1,17 @@
+{
+  a: searchUsers(name: "%") {
+    followers(first: 10) { __typename }
+  }
+  b: searchUsers(name: "%") {
+    followers(first: 10) { __typename }
+  }
+  c: searchUsers(name: "%") {
+    followers(first: 10) { __typename }
+  }
+  d: searchUsers(name: "%") {
+    followers(first: 10) { __typename }
+  }
+  e: searchUsers(name: "%") {
+    followers(first: 10) { __typename }
+  }
+}

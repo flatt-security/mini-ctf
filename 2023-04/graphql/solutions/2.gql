@@ -1,0 +1,18 @@
+{
+  listUsers(first: 10) {
+    nodes {
+      id
+      name
+      parentId
+    }
+    edges {
+      cursor
+    }
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
+  }
+}

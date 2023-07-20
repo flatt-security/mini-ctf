@@ -1,0 +1,17 @@
+services:
+  app:
+    build:
+      context: .
+    environment:
+      PORT: 3000
+      FLAG1: flag{flag1}
+      FLAG2: flag{flag2}
+      FLAG3: flag{flag3}
+      FLAG4: flag{flag4}
+    ports:
+      - 3000:3000
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 512M

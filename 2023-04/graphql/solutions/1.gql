@@ -1,0 +1,7 @@
+{
+  getFlag {
+    ... on Flag {
+      flag1
+    }
+  }
+}

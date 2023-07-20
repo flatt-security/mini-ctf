@@ -1,0 +1,52 @@
+name: welcome
+description: |-
+  `getFlag`を呼んでください。
+  
+  ```
+  query GetFlag {
+    getFlag {
+      # ?
+    }
+  }
+  ```
+  
+  ---
+  
+  ## 手元環境のセットアップ
+  
+  ```
+  docker-compose up --build
+  ```
+  
+  起動後に `http://localhost:3000/graphql` にアクセス
+  
+  - GraphQLについて知らない場合 <https://graphql.org/learn/> を読んでみてください
+  - GraphQLを実行する際には以下のいずれかのツールがおすすめです
+    - <https://github.com/graphql/graphiql>
+    - <https://altairgraphql.dev/>
+  
+  ## 注意
+  
+  - 配布物に含まれる`database.db`はサーバ上のものと同じです
+  - サーバはCloud Run上で動いています
+    - 割り当てられているメモリ: 512MiB
+    - 割り当てられているvCPU: 1
+    - リクエストタイムアウト: 3秒
+    - コンテナあたりの最大リクエスト数: 1
+  - サーバへの過度な連続アクセスは必要ありません。flagはそれぞれ一度のアクセスのみで取得できます
+section: GraphQL
+category:
+  - web
+subCategory:
+difficulty: baby
+author: akiym
+releasedAt: 2023-04-26T19:35:00+09:00
+flag:
+  flag: 'flag{flag1__you_got_flag_Zqf9fA}'
+  points: 100
+attachments:
+  - ./dist.zip
+servers:
+  - type: custom
+    description: |-
+      <https://...>
