@@ -12,9 +12,9 @@ https://flatt.connpass.com/event/287856/
 | 問題名     | 難易度 | カテゴリ | 点数 | 解いた人数 (#1, #2) |
 |------------|--------|----------|------|---------------------|
 | welcome    | baby   | web      | 100  | 17, 20              |
-| complexity | easy   | web      | 200  | 6, 2                |
-| dos        | medium | web      | 300  | 0, 2                |
-| smash      | hard   | web      | 400  | 1, 5                |
+| complexity | easy   | web      | 200  | 2, 6                |
+| dos        | medium | web      | 300  | 2, 0                |
+| smash      | hard   | web      | 400  | 5, 1                |
 
 <details>
   <summary>競技中に公開されたヒント</summary>
