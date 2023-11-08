@@ -9,12 +9,12 @@ https://flatt.connpass.com/event/287856/
 [問題文](graphql/chall)
 [配布物](graphql/chall/dist.zip)
 
-| 問題名     | 難易度 | カテゴリ | 点数 | 解いた人数 (#1, #2) |
-|------------|--------|----------|------|---------------------|
-| welcome    | baby   | web      | 100  | 17, 20              |
-| complexity | easy   | web      | 200  | 2, 6                |
-| dos        | medium | web      | 300  | 2, 0                |
-| smash      | hard   | web      | 400  | 5, 1                |
+| Challenge name | Difficulty | Category | Points | Author | Solves (#1, #2) |
+|----------------|------------|----------|--------|--------|-----------------|
+| welcome        | baby       | web      | 100    | akiym  | 17, 20          |
+| complexity     | easy       | web      | 200    | akiym  | 2, 6            |
+| dos            | medium     | web      | 300    | akiym  | 2, 0            |
+| smash          | hard       | web      | 400    | akiym  | 5, 1            |
 
 <details>
   <summary>競技中に公開されたヒント</summary>
