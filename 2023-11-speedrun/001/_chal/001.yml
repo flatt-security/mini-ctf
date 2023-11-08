@@ -1,0 +1,37 @@
+name: deny
+description: |-
+  Welcome to Speedrun CTF!
+  
+  **Target time: 2:30**
+  
+  ---
+  
+  手元で問題を動かす場合は以下のコマンドを実行してください / Run the following command to run the challenge locally:
+  
+  ```
+  docker compose up --build
+  ```
+  
+  リモートサーバはCloud Run上で動いています。ロードバランサの挙動がローカル環境とは異なる可能性があることに注意してください。
+  
+  The remote server is running on Cloud Run. Note that the load balancer may behaves differently from your local environment.
+section:
+category:
+  - web
+subCategory:
+difficulty: baby
+author: akiym
+releasedAt: 2023-11-09T00:00:00+09:00
+flags:
+  flag: 'flag{why_dont_you_use_PATH_INFO}'
+  points: 1
+attachments:
+  - ./deny.zip
+servers:
+  - type: custom
+    description: |-
+      <https://...>
+meta:
+  emoji: ⛔
+  bg: '#A0AEC0'
+  targetTime: 150000

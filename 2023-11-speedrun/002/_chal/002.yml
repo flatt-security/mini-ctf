@@ -1,0 +1,26 @@
+name: gadget
+description: |-
+  Choose your own function!
+  
+  **Target time: 5:00**
+category:
+  - web
+subCategory:
+  - python
+difficulty: easy
+author: akiym
+lockedBy: ../../001/_chal/001.yml
+releasedAt: 2023-11-09T00:00:00+09:00
+flags:
+  flag: 'flag{literal_eval_is_unexploitable_isnt_it?}'
+  points: 1
+attachments:
+  - ./gadget.zip
+servers:
+  - type: custom
+    description: |-
+      <https://...>
+meta:
+  emoji: 🫙
+  bg: '#FAF089'
+  targetTime: 300000

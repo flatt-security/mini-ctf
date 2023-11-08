@@ -1,0 +1,28 @@
+name: bread
+description: |-
+  This is the final challenge. No Node.js, Bun is better.
+  
+  **Target time: 13:30**
+section:
+category:
+  - web
+subCategory:
+  - javascript
+  - bun
+difficulty: hard
+author: akiym
+lockedBy: ../../004/_chal/004.yml
+releasedAt: 2023-11-09T00:00:00+09:00
+flags:
+  flag: 'flag{file_scheme_isnt_implemented_in_nodejs}'
+  points: 1
+attachments:
+  - ./bread.zip
+servers:
+  - type: custom
+    description: |-
+      <https://...>
+meta:
+  emoji: 🫓
+  bg: '#EDF2F7'
+  targetTime: 810000

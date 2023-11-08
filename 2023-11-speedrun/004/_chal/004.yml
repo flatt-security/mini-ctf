@@ -1,0 +1,27 @@
+name: arrow
+description: |-
+  Dart?
+  
+  **Target time: 10:00**
+section:
+category:
+  - web
+subCategory:
+  - dart
+difficulty: easy
+author: akiym
+lockedBy: ../../003/_chal/003.yml
+releasedAt: 2023-11-09T00:00:00+09:00
+flags:
+  flag: 'flag{dont_confuse_frontend_and_backend}'
+  points: 1
+attachments:
+  - ./arrow.zip
+servers:
+  - type: custom
+    description: |-
+      <https://...>
+meta:
+  emoji: 🎯
+  bg: '#bee3f8'
+  targetTime: 600000

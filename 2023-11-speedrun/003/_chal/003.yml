@@ -1,0 +1,27 @@
+name: gem
+description: |-
+  Params, params, params!
+  
+  **Target time: 8:30**
+section:
+category:
+  - web
+subCategory:
+  - ruby
+difficulty: medium
+author: akiym
+lockedBy: ../../002/_chal/002.yml
+releasedAt: 2023-11-09T00:00:00+09:00
+flags:
+  flag: 'flag{this_behavior_is_useful_btw}'
+  points: 1
+attachments:
+  - ./gem.zip
+servers:
+  - type: custom
+    description: |-
+      <https://...>
+meta:
+  emoji: 💎
+  bg: '#FED7D7'
+  targetTime: 510000
