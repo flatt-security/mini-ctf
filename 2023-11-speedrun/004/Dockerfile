@@ -4,7 +4,6 @@ WORKDIR /app
 
 COPY pubspec.* ./
 RUN dart pub get
-RUN dart pub global activate webdev
 
 COPY bin ./bin
 COPY lib ./lib
@@ -14,7 +13,7 @@ RUN secret=$(head -c 16 /dev/urandom | sha256sum | awk '{print $1}') && \
     sed -i "s/<PLACEHOLDER>/$secret/g" lib/util.dart
 
 RUN dart compile exe bin/server.dart -o bin/server
-RUN webdev build
+RUN dart pub run webdev build
 
 FROM scratch
 

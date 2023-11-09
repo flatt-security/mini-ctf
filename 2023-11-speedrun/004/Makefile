@@ -1,4 +1,4 @@
-DIST := bin/* lib/* web/* compose.yaml Dockerfile pubspec.lock pubspec.yaml
+DIST := bin/* lib/* web/* compose.yaml Dockerfile pubspec.lock pubspec.yaml old_arrow.zip
 
 DIST_ZIP := _chal/arrow.zip
 DATE := 202311090000.00

@@ -65,6 +65,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.1"
+  browser_launcher:
+    dependency: transitive
+    description:
+      name: browser_launcher
+      sha256: "6ee4c6b1f68a42e769ef6e663c4f56708522f7bce9d2ab6e308a37b612ffa4ec"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.1"
   build:
     dependency: transitive
     description:
@@ -185,6 +193,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.3"
+  dap:
+    dependency: transitive
+    description:
+      name: dap
+      sha256: "1dc9a11bc60836b151672d3edb6a56a18383ecf122e56eaf5837b32c81641aeb"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.0"
   dart_jsonwebtoken:
     dependency: "direct main"
     description:
@@ -201,6 +217,38 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.3.3"
+  dds:
+    dependency: transitive
+    description:
+      name: dds
+      sha256: "6376a41058f6c241b3257b03eb0f405534d91cd061640bf2ccec31c060799c56"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.11.1"
+  dds_service_extensions:
+    dependency: transitive
+    description:
+      name: dds_service_extensions
+      sha256: "609d0a5d928502f7d160e4466f644474352721f4880c840ec9e8d208fff16d95"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.6.0"
+  devtools_shared:
+    dependency: transitive
+    description:
+      name: devtools_shared
+      sha256: "81528e760c89f0e9e093e8a01135bb067e4ea7beab509e8effc2916452c4a4c1"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.0.1"
+  dwds:
+    dependency: transitive
+    description:
+      name: dwds
+      sha256: "02fc0152c64a24b1b80f742bcbb04470c26aac7be252d50381d19899b05204e4"
+      url: "https://pub.dev"
+    source: hosted
+    version: "19.0.2+1"
   ed25519_edwards:
     dependency: transitive
     description:
@@ -209,14 +257,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.3.1"
+  extension_discovery:
+    dependency: transitive
+    description:
+      name: extension_discovery
+      sha256: "20735622d0763865f9d94c3ecdce4441174530870760253e9d364fb4f3da8688"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.0"
   file:
     dependency: transitive
     description:
       name: file
-      sha256: "5fc22d7c25582e38ad9a8515372cd9a93834027aacf1801cf01164dac0ffa08c"
+      sha256: "1b92bec4fc2a72f59a8e15af5f52cd441e4a7860b49499d69dfa817af20e925d"
       url: "https://pub.dev"
     source: hosted
-    version: "7.0.0"
+    version: "6.1.4"
   fixnum:
     dependency: transitive
     description:
@@ -249,6 +305,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.3.1"
+  http:
+    dependency: transitive
+    description:
+      name: http
+      sha256: "5895291c13fa8a3bd82e76d5627f69e0d85ca6a30dcac95c4ea19a5d555879c2"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.13.6"
   http_methods:
     dependency: transitive
     description:
@@ -297,6 +361,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.8.1"
+  json_rpc_2:
+    dependency: transitive
+    description:
+      name: json_rpc_2
+      sha256: "5e469bffa23899edacb7b22787780068d650b106a21c76db3c49218ab7ca447e"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.2"
   logging:
     dependency: transitive
     description:
@@ -401,6 +473,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.4.1"
+  shelf_packages_handler:
+    dependency: transitive
+    description:
+      name: shelf_packages_handler
+      sha256: "89f967eca29607c933ba9571d838be31d67f53f6e4ee15147d5dc2934fee1b1e"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.2"
+  shelf_proxy:
+    dependency: transitive
+    description:
+      name: shelf_proxy
+      sha256: a71d2307f4393211930c590c3d2c00630f6c5a7a77edc1ef6436dfd85a6a7ee3
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.4"
   shelf_router:
     dependency: "direct main"
     description:
@@ -441,6 +529,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.10.0"
+  sse:
+    dependency: transitive
+    description:
+      name: sse
+      sha256: "3ff9088cac3f45aa8b91336f1962e3ea6c81baaba0bbba361c05f8aa7fb59442"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.1.2"
   stack_trace:
     dependency: transitive
     description:
@@ -505,6 +601,30 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.3.2"
+  usage:
+    dependency: transitive
+    description:
+      name: usage
+      sha256: "0bdbde65a6e710343d02a56552eeaefd20b735e04bfb6b3ee025b6b22e8d0e15"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.1.1"
+  uuid:
+    dependency: transitive
+    description:
+      name: uuid
+      sha256: "648e103079f7c64a36dc7d39369cabb358d377078a051d6ae2ad3aa539519313"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.7"
+  vm_service:
+    dependency: transitive
+    description:
+      name: vm_service
+      sha256: c538be99af830f478718b51630ec1b6bee5e74e52c8a802d328d9e71d35d2583
+      url: "https://pub.dev"
+    source: hosted
+    version: "11.10.0"
   watcher:
     dependency: transitive
     description:
@@ -521,6 +641,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.4.0"
+  webdev:
+    dependency: "direct dev"
+    description:
+      name: webdev
+      sha256: "763af7cbf2094a21c2a967f382a93bfd09b7d558e6bfd3338ffc6596ae0d9c61"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.7+1"
+  webkit_inspection_protocol:
+    dependency: transitive
+    description:
+      name: webkit_inspection_protocol
+      sha256: "87d3f2333bb240704cd3f1c6b5b7acd8a10e7f0bc28c28dcf14e782014f4a572"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.2.1"
   yaml:
     dependency: transitive
     description:
@@ -529,5 +665,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.1.2"
+  yaml_edit:
+    dependency: transitive
+    description:
+      name: yaml_edit
+      sha256: "1579d4a0340a83cf9e4d580ea51a16329c916973bffd5bd4b45e911b25d46bfd"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.1"
 sdks:
   dart: ">=3.1.5 <3.4.0"
