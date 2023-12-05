@@ -1,0 +1,29 @@
+id: 004-semgrep
+name: semgrep
+description: |-
+  It's brand new semgrep-js-sandbox!
+  
+  ---
+  
+  semgrepが動くリモートサーバは遅いです。まずは手元の環境で問題を解くことを強くお勧めします。
+  
+  **Target time: 20:00**
+flag: 'flag{broken_js_have_no_semantics}'
+points: 1
+attachments:
+  - ./semgrep.zip
+servers:
+  - type: custom
+    description: |-
+      <https://...>
+section:
+categories:
+  - web
+difficulty: medium
+author: akiym
+releasedAt: 2023-12-05T18:40:00+09:00
+lockedBy: ../../003/_chal/003.yml
+meta:
+  emoji: 🤖
+  bg: '#edf2f7'
+  targetTime: '1200000'

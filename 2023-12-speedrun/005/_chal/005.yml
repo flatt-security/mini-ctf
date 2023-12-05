@@ -1,0 +1,25 @@
+id: 005-nginx
+name: nginx
+description: |-
+  <https://github.com/yandex/gixy> is your friend!
+  
+  **Target time: 20:00**
+flag: 'flag{x_header_again_and_everything_is_hidden_in_x}'
+points: 1
+attachments:
+  - ./nginx.zip
+servers:
+  - type: custom
+    description: |-
+      <https://...>
+section:
+categories:
+  - web
+difficulty: medium
+author: akiym
+releasedAt: 2023-12-05T18:40:00+09:00
+lockedBy: ../../004/_chal/004.yml
+meta:
+  emoji: ⚙️
+  bg: '#bee3f8'
+  targetTime: '1200000'

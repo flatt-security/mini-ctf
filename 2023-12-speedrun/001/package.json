@@ -1,0 +1,14 @@
+{
+  "name": "x",
+  "type": "module",
+  "dependencies": {
+    "request-ip": "^3.3.0"
+  },
+  "devDependencies": {
+    "@types/request-ip": "^0.0.41",
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

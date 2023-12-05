@@ -1,0 +1,26 @@
+id: 003-busybox2
+name: busybox2
+description: |-
+  Run `/getflag`.
+  
+  **Target time: 10:00**
+flag: 'flag{you_can_directly_run_busybox_sh_btw}'
+points: 1
+attachments:
+  - ./busybox2.zip
+servers:
+  - type: custom
+    description: |-
+      <https://...>
+section:
+categories:
+  - web
+  - misc
+difficulty: easy
+author: akiym
+releasedAt: 2023-12-05T18:40:00+09:00
+lockedBy: ../../002/_chal/002.yml
+meta:
+  emoji: 🥡
+  bg: '#fed7d7'
+  targetTime: '600000'

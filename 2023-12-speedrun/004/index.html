@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <title>semgrep</title>
+    <style>
+      * {
+        font-family: monospace;
+      }
+      textarea {
+        display: block;
+      }
+      pre {
+        padding: 1em;
+        background: #222;
+        color: #fff;
+        border: 1px solid #fff;
+        white-space: pre-wrap;
+        word-break: break-all;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <textarea name="code" rows="2" cols="80" autofocus></textarea>
+      <input type="submit" name="submit" value="Run" />
+    </form>
+    <pre id="console"></pre>
+    <script type="module">
+      const form = document.forms[0];
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        form.elements.submit.disabled = true;
+
+        const code = form.elements.code.value;
+        const res = await fetch("/run", {
+          method: "POST",
+          body: JSON.stringify({ code }),
+        });
+        const data = await res.json();
+        document.getElementById("console").textContent = data.error
+          ? data.error
+          : data.output + data.stdout + data.stderr;
+
+        form.elements.submit.disabled = false;
+      });
+    </script>
+  </body>
+</html>

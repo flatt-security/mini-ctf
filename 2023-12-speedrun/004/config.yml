@@ -1,0 +1,153 @@
+rules:
+  - id: ctf.javascript.insecure-function
+    message: Don't use insecure function.
+    severity: ERROR
+    languages:
+      - javascript
+    options:
+      symbolic_propagation: true
+    pattern-either:
+      - pattern: eval(...)
+      - pattern: require(...)
+      - pattern: import(...)
+  - id: ctf.javascript.insecure-word
+    message: It's forbidden spells.
+    severity: ERROR
+    languages:
+      - javascript
+    options:
+      symbolic_propagation: true
+    pattern-either:
+      - pattern: addEventListener
+      - pattern: alert
+      - pattern: atob
+      - pattern: btoa
+      - pattern: clearImmediate
+      - pattern: clearInterval
+      - pattern: clearTimeout
+      - pattern: confirm
+      - pattern: dispatchEvent
+      - pattern: fetch
+      - pattern: postMessage
+      - pattern: prompt
+      - pattern: queueMicrotask
+      - pattern: removeEventListener
+      - pattern: reportError
+      - pattern: setImmediate
+      - pattern: setInterval
+      - pattern: setTimeout
+      - pattern: structuredClone
+      - pattern: global
+      - pattern: EventSource
+      - pattern: Bun
+      - pattern: File
+      - pattern: crypto
+      - pattern: navigator
+      - pattern: performance
+      - pattern: process
+      - pattern: Blob
+      - pattern: Buffer
+      - pattern: BuildError
+      - pattern: BuildMessage
+      - pattern: Crypto
+      - pattern: HTMLRewriter
+      - pattern: Request
+      - pattern: ResolveError
+      - pattern: ResolveMessage
+      - pattern: Response
+      - pattern: TextDecoder
+      - pattern: AbortController
+      - pattern: AbortSignal
+      - pattern: BroadcastChannel
+      - pattern: ByteLengthQueuingStrategy
+      - pattern: CloseEvent
+      - pattern: CountQueuingStrategy
+      - pattern: CryptoKey
+      - pattern: CustomEvent
+      - pattern: DOMException
+      - pattern: ErrorEvent
+      - pattern: Event
+      - pattern: EventTarget
+      - pattern: FormData
+      - pattern: Headers
+      - pattern: MessageChannel
+      - pattern: MessageEvent
+      - pattern: MessagePort
+      - pattern: ReadableByteStreamController
+      - pattern: ReadableStream
+      - pattern: ReadableStreamBYOBReader
+      - pattern: ReadableStreamBYOBRequest
+      - pattern: ReadableStreamDefaultController
+      - pattern: ReadableStreamDefaultReader
+      - pattern: SubtleCrypto
+      - pattern: TextEncoder
+      - pattern: TransformStream
+      - pattern: URL
+      - pattern: URLSearchParams
+      - pattern: WebSocket
+      - pattern: Worker
+      - pattern: WritableStream
+      - pattern: WritableStreamDefaultController
+      - pattern: WritableStreamDefaultWriter
+      - pattern: TransformStreamDefaultController
+      - pattern: self
+      - pattern: onmessage
+      - pattern: onerror
+  - id: ctf.javascript.insecure-prototype
+    message: No more prototype pollution.
+    severity: ERROR
+    languages:
+      - javascript
+    options:
+      symbolic_propagation: true
+    pattern-either:
+      - pattern: __proto__
+      - pattern: prototype
+  - id: ctf.javascript.insecure-string
+    message: Don't use strings.
+    severity: ERROR
+    languages:
+      - javascript
+    options:
+      symbolic_propagation: true
+    pattern-either:
+      - pattern: "'...'"
+      - pattern: '"..."'
+  - id: ctf.javascript.insecure-block
+    message: Don't make objects.
+    severity: ERROR
+    languages:
+      - javascript
+    options:
+      symbolic_propagation: true
+    pattern-either:
+      - pattern: '{...}'
+  - id: ctf.javascript.insecure-js-fuck
+    message: No more https://jsfuck.com/
+    severity: ERROR
+    languages:
+      - javascript
+    options:
+      symbolic_propagation: true
+    pattern-either:
+      - pattern: '[][...]'
+      - pattern: '[...]'
+  - id: ctf.javascript.insecure-constructor
+    message: Don't use constructors.
+    severity: ERROR
+    languages:
+      - javascript
+    options:
+      symbolic_propagation: true
+    pattern-either:
+      - pattern: new $X(...)
+      - pattern: constructor(...)
+  - id: ctf.javascript.insecure-assignment
+    message: Don't use assignments.
+    severity: ERROR
+    languages:
+      - javascript
+    options:
+      symbolic_propagation: true
+    pattern-either:
+      - pattern: $X = ...;

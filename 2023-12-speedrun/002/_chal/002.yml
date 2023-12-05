@@ -1,0 +1,27 @@
+id: 002-busybox1
+name: busybox1
+description: |-
+  Read `/flag`.
+  
+  **Target time: 5:00**
+flag: 'flag{you_can_read_any_file_without_cat}'
+points: 1
+attachments:
+  - ./busybox1.zip
+servers:
+  - type: custom
+    description: |-
+      <https://...>
+section:
+categories:
+  - web
+  - misc
+tags:
+difficulty: baby
+author: akiym
+releasedAt: 2023-12-05T18:40:00+09:00
+lockedBy: ../../001/_chal/001.yml
+meta:
+  emoji: 📦
+  bg: '#faf089'
+  targetTime: '300000'

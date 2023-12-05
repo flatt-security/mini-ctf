@@ -1,0 +1,35 @@
+id: 001-x
+name: x
+description: |-
+  x means x- header.
+  
+  **Target time: 5:00**
+  
+  ---
+  
+  手元で問題を動かす場合は以下のコマンドを実行してください:
+  
+  ```
+  docker compose up --build
+  ```
+  
+  リモートサーバはすべてCloud Run上で動いています。ロードバランサの挙動がローカル環境とは異なる可能性があることに注意してください。
+flag: 'flag{not_only_x-forwarded-for}'
+points: 1
+attachments:
+  - ./x.zip
+servers:
+  - type: custom
+    description: |-
+      <https://...>
+section:
+categories:
+  - web
+tags:
+difficulty: baby
+author: akiym
+releasedAt: 2023-12-05T18:40:00+09:00
+meta:
+  emoji: 🙅
+  bg: '#a0aec0'
+  targetTime: '300000'

@@ -1,0 +1,39 @@
+server {
+    listen       ${PORT};
+    server_name  localhost;
+
+    location / {
+        root   /usr/share/nginx/html;
+        index  index.html index.htm;
+    }
+
+    # vuln1: https://github.com/yandex/gixy/blob/master/docs/en/plugins/aliastraversal.md
+    location /alias-traversal {
+        alias /usr/share/nginx/html/;
+    }
+
+    # vuln2: https://github.com/yandex/gixy/blob/master/docs/en/plugins/httpsplitting.md
+    location ~ /header-injection/([^/]*) {
+        add_header X-Header-Injection $1;
+        return 200;
+    }
+
+    location /admin {
+        auth_basic "Administrator's Area";
+        auth_basic_user_file /usr/share/nginx/.htpasswd;
+
+        location ~ /admin/proxy/(.*) {
+            proxy_pass http://127.0.0.1:${PORT}/$1;
+        }
+
+        location /admin/flag {
+            # https://nginx.org/en/docs/http/ngx_http_core_module.html#internal
+            internal;
+
+            # so slow... you will be timed out!
+            limit_rate 1;
+
+            return 200 "${FLAG}";
+        }
+    }
+}

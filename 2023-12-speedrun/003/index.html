@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <title>busybox</title>
+    <style>
+      * {
+        font-family: monospace;
+      }
+      form {
+        display: flex;
+        align-items: center;
+        > span {
+          width: 1em;
+        }
+        > input {
+          width: 100%;
+        }
+      }
+      pre {
+        padding: 1em;
+        background: #222;
+        color: #fff;
+        border: 1px solid #fff;
+        white-space: pre-wrap;
+        word-break: break-all;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <span>$ </span>
+      <input type="text" name="command" autofocus />
+    </form>
+    <pre id="console"></pre>
+    <script type="module">
+      const form = document.forms[0];
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const command = form.elements.command.value;
+        const res = await fetch("/run", {
+          method: "POST",
+          body: JSON.stringify({ command: command.split(/\s+/) }),
+        });
+        const data = await res.json();
+        document.getElementById("console").textContent = data.error
+          ? data.error
+          : data.stdout + data.stderr;
+      });
+    </script>
+  </body>
+</html>
