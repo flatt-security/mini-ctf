@@ -6,7 +6,7 @@
 - https://peatix.com/event/3848293/
 
 ## 出題した問題
-| Challenge name | Difficulty | Category | Points | Author | Solves (#3, #4) |
+| Challenge name | Difficulty | Category | Points | Author | Solves (#3, #4) ||
 |----------------|------------|----------|--------|--------|-----------------|-|
 |Self           | baby       | web, cloud(AWS)      | 100    | Azara  | 5, 8            |[Description](./001/_chal/001.yml), [Deploy](./001/src/README.md)|
 | Miss Box       | medium     | web, cloud(AWS)      | 200    | Azara  | 0, 1            |[Description](./002/_chal/002.yml), [Deploy](./002/src/README.md)|
