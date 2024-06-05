@@ -1,0 +1,25 @@
+{
+  "name": "contact-worker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "node build.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-lambda": "^1.0.7",
+    "esbuild": "^0.19.6",
+    "glob": "^10.3.10",
+    "puppeteer": "^21.5.2",
+    "puppeteer-core": "^21.5.2",
+    "selenium-webdriver": "^4.15.0",
+    "tsc": "^2.0.4",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "@types/selenium-webdriver": "^4.1.20"
+  }
+}

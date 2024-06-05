@@ -1,0 +1,27 @@
+{
+  "missbox-container-stack": {
+    "ExportsOutputRefmissboxcontainerreportrepositoryD21AFF47C3E967E7": "missbox-container-report-repository",
+    "ExportsOutputFnGetAttmissboxcontainerreportrepositoryD21AFF47ArnC69FD2E2": "arn:aws:ecr:ap-northeast-1:726319149498:repository/missbox-container-report-repository"
+  },
+  "missbox-idp-stack": {
+    "ExportsOutputRefmissboxidp5CC6D7CFD30AFCFF": "ap-northeast-1_KMv141cpi",
+    "ExportsOutputFnGetAttmissboxidp5CC6D7CFArn17933E85": "arn:aws:cognito-idp:ap-northeast-1:726319149498:userpool/ap-northeast-1_KMv141cpi",
+    "missboxidpuserpoolid": "ap-northeast-1_KMv141cpi",
+    "missboxidpuserpoolclientid": "jhm2csjfig2885sf8119hvuq8",
+    "ExportsOutputRefmissboxidpmissboxidpclientE77705D896CC47B8": "jhm2csjfig2885sf8119hvuq8"
+  },
+  "missbox-web-stack": {
+    "bucketName": "missbox-web-web-host-bucket",
+    "distributionId": "ETH1ZECPOFMZU",
+    "distributionUrl": "https://d1vkt6984bn7xr.cloudfront.net",
+    "ExportsOutputFnGetAttmissboxwebdistributionCFDistribution9E077558DomainNameD1D7C103": "d1vkt6984bn7xr.cloudfront.net",
+    "ExportsOutputRefmissboxwebbucketB6880CE96A09771D": "missbox-web-web-host-bucket",
+    "ExportsOutputFnGetAttmissboxwebbucketB6880CE9Arn7BD4FEB6": "arn:aws:s3:::missbox-web-web-host-bucket",
+    "distributionDomainName": "d1vkt6984bn7xr.cloudfront.net"
+  },
+  "missbox-api-stack": {
+    "missboxapiapiurl": "https://rp065n90h5.execute-api.ap-northeast-1.amazonaws.com/v1/",
+    "missboxapiapiid": "rp065n90h5",
+    "missboxapiapiEndpointC0B7675A": "https://rp065n90h5.execute-api.ap-northeast-1.amazonaws.com/v1/"
+  }
+}

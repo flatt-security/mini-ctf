@@ -1,0 +1,28 @@
+id: 002-miss-box
+name: Miss Box
+description: |-
+  令和最新版の画像共有サービス「File Box Advance」を使ってみました!  
+  とても便利!いっぱい使ってみてください!  
+  あと、もし何か面白い画像があったら管理者に教えてくださいね!
+
+  使い方は添付ファイルを見てください！
+flag: 'flag{x55_du3_70_477r1bu73_53771n6_m1574k3}'
+points: 200
+attachments:
+  - ./miss_box.zip
+servers:
+  - type: custom
+    description: |-
+      <https://d1vkt6984bn7xr.cloudfront.net/>
+  - type: custom
+    description: |-
+      <https://rp065n90h5.execute-api.ap-northeast-1.amazonaws.com/v1/>
+section:
+categories:
+  - web
+tags:
+  - cloud
+  - aws
+difficulty: medium
+author: azara
+releasedAt: 2023-11-30T19:45:00+09:00

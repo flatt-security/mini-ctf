@@ -1,0 +1,20 @@
+{
+  "web-stack": {
+    "ExportsOutputFnGetAttwebwebhostbucketF16A0525ArnC938645F": "arn:aws:s3:::web-web-host-bucket",
+    "webbucketname": "web-web-host-bucket",
+    "webdistributiondomainname": "drwl0sg0kpq1m.cloudfront.net",
+    "ExportsOutputFnGetAttwebdistribution0F909115DomainName9EB781EB": "drwl0sg0kpq1m.cloudfront.net",
+    "ExportsOutputRefwebwebhostbucketF16A0525559F9121": "web-web-host-bucket"
+  },
+  "idp-stack": {
+    "idpuserpoolclientid": "21f6qls3ka4vcpdi5iufgjcm9t",
+    "ExportsOutputRefidp2BA317CE1505B4EE": "ap-northeast-1_2VxnZqEEj",
+    "ExportsOutputRefidpidpclientABFE1552377BD64A": "21f6qls3ka4vcpdi5iufgjcm9t",
+    "idpuserpoolid": "ap-northeast-1_2VxnZqEEj"
+  },
+  "api-stack": {
+    "apiapiEndpoint529C257D": "https://drr0csdhg5.execute-api.ap-northeast-1.amazonaws.com/v1/",
+    "apiapiurl": "https://drr0csdhg5.execute-api.ap-northeast-1.amazonaws.com/v1/",
+    "apiapiid": "drr0csdhg5"
+  }
+}

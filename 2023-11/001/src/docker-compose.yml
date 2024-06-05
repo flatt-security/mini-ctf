@@ -1,0 +1,43 @@
+version: '3.7'
+services:
+  base:
+    build: 
+      context: ./develop/base
+      dockerfile: Dockerfile
+    image: ts-app-base
+    container_name: ts-app-base
+    working_dir: /app
+  cdk:
+    build: 
+      context: ./develop/cdk-node
+      dockerfile: Dockerfile
+    image: ts-app-cdk
+    container_name: cdk
+    volumes:
+      - ./develop/cdk-node/init.sh:/app/init.sh
+      - ./cdk:/app/cdk
+      - ./frontend:/app/frontend
+      - ./credentials/aws.toml:/root/.aws/credentials:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+    working_dir: /app/cdk
+    environment:
+      - FLAG=flag{w3lc0m3_70_m1n1_c7f_3_53lf_516nup}
+      - STAGE=dev
+    depends_on:
+      - base
+  frontend:
+    build: 
+      context: ./develop/front
+      dockerfile: Dockerfile
+    image: ts-app-front
+    container_name: front
+    volumes:
+      - ./develop/front/init.sh:/app/init.sh
+      - ./frontend:/app/frontend
+    ports:
+      - "4173:4173"
+      - "5173:5173"
+    stdin_open: true
+    working_dir: /app/frontend
+    depends_on:
+      - base

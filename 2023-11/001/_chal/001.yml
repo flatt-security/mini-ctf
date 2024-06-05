@@ -1,0 +1,24 @@
+id: 001-self
+name: Self
+description: |-
+  Welcome to Mini CTF #3!  
+  あなたは管理者になれますか？
+
+  管理者になって`GET /v1/flag`を叩いてください!
+flag: 'flag{w3lc0m3_70_m1n1_c7f_3_53lf_516nup}'
+points: 100
+attachments:
+  - ./self.zip
+servers:
+  - type: custom
+    description: |-
+      問題を立ち上げ、CloudFrontのURLにアクセスしてください。
+section:
+categories:
+  - web
+tags:
+  - cloud
+  - aws
+difficulty: baby
+author: azara
+releasedAt: 2023-11-30T19:45:00+09:00

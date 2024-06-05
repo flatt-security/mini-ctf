@@ -1,0 +1,21 @@
+.AppGrid {
+  min-height: 100vh;
+}
+
+.AppHeader {
+  padding: 0;
+  background-color: #242424;
+}
+
+.AppBody {
+}
+
+.AppFooter {
+  text-align: left;
+  background-color: #242424;
+}
+
+.AppFooter a {
+  padding-left: 10vh;
+  color: #fff;
+}
