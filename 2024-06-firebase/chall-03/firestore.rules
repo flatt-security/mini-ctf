@@ -1,0 +1,28 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{uid} {
+      allow get: if (
+        request.auth != null &&
+        request.auth.uid == uid
+      );
+
+      allow update: if (
+        request.auth != null &&
+        request.auth.uid == uid &&
+        request.resource.data.keys().hasAll(['clicks']) &&
+        request.resource.data.clicks is int &&
+        request.resource.data.clicks == resource.data.clicks + 1
+      );
+    }
+
+
+    match /flags/flag {
+      allow get: if (
+        request.auth != null &&
+        request.auth.token.tier == 'HACKER'
+      );
+    }
+  }
+}

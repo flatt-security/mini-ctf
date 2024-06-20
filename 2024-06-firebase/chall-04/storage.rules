@@ -1,0 +1,26 @@
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /exports/{userId}/{fileName} {
+      allow get: if (
+        request.auth != null &&
+        (
+          request.auth.uid == userId ||
+          request.auth.uid == resource.metadata.allowedUserId
+        )
+      );
+
+      // MEMO: 各ユーザーのフォルダは Cloud Functions からしか書き込めないないようにしておく
+      allow write: if false;
+    }
+
+    // MEMO: それ以外のフォルダは将来的な機能拡張のために書き込めるようにしておく
+    match /exports/{free=**} {
+      allow write: if (
+        request.auth != null &&
+        request.resource.size < 5 * 1024
+      );
+    }
+  }
+}

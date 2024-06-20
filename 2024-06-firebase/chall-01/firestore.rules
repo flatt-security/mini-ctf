@@ -1,0 +1,14 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /flags/flag {
+      allow get: if (
+        request.auth != null &&
+
+        // メールアドレスのドメインが @flatt.example.test ではない場合は拒否
+        request.auth.token.email.matches("^.+@flatt.example.test$")
+      );
+    }
+  }
+}

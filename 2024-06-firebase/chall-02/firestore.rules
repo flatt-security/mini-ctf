@@ -1,0 +1,43 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function checkSchema() {
+      let incoming = request.resource.data;
+
+      return (
+        incoming.keys().hasAll(['name', 'body', 'createdBy']) &&
+        incoming.keys().hasOnly(['name', 'body', 'createdBy']) &&
+        incoming.name is string &&
+        incoming.name != "admin@flatt.tech" &&
+        incoming.body is string &&
+        incoming.body.size() >= 1 &&
+        incoming.createdBy is string &&
+        incoming.createdBy == request.auth.uid
+      );
+    }
+
+    match /publicPosts/{postId} {
+      allow read: if (
+        request.auth != null
+      );
+
+      allow create: if (
+        request.auth != null &&
+        checkSchema()
+      );
+    }
+
+    match /privatePosts/0/{uid}/{postId} {
+      allow read: if (
+        request.auth != null
+      );
+
+      allow create: if (
+        request.auth != null &&
+        checkSchema() &&
+        uid == request.auth.uid
+      );
+    }
+  }
+}

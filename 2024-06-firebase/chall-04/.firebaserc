@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "flatt-minictf-noteexporter"
+  },
+  "targets": {
+    "flatt-minictf-noteexporter": {
+      "storage": {
+        "default": [
+          "flatt-minictf-noteexporter.appspot.com"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
