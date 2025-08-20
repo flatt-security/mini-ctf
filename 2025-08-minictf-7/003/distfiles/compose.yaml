@@ -1,0 +1,7 @@
+services:
+  web:
+    build: ./web
+    restart: unless-stopped
+    init: true
+    ports:
+      - "3002:3000"

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cow Chatter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+        .input-section {
+            margin-bottom: 30px;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 15px 20px;
+            border: 2px solid #e1e5e9;
+            border-radius: 12px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        input[type="text"]:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        button {
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 120px;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .output-section {
+            margin-top: 30px;
+        }
+
+        .output-box {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .output-content {
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.4;
+            white-space: pre-wrap;
+            color: #333;
+            width: 100%;
+            text-align: left;
+        }
+
+        .loading {
+            color: #667eea;
+            font-style: italic;
+        }
+
+        .error {
+            color: #dc3545;
+            background: #f8d7da;
+            border-color: #f5c6cb;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .example-text {
+            color: #888;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 10px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .input-group {
+                flex-direction: column;
+            }
+            
+            button {
+                width: 100%;
+            }
+        }
+
+        .cow-emoji {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cow-emoji">🐄</div>
+        <h1>Cow Chatter</h1>
+        <p class="subtitle">牛さんにメッセージを喋らせよう！</p>
+        
+        <div class="input-section">
+            <form id="cowsayForm">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="messageInput" 
+                        placeholder="メッセージを入力してください（最大100文字）" 
+                        maxlength="100"
+                        required
+                    >
+                    <button type="submit" id="generateBtn">
+                        生成する
+                    </button>
+                </div>
+                <div class="example-text">
+                    例: "Hello World!" や "今日はいい天気ですね！"
+                </div>
+            </form>
+        </div>
+
+        <div class="output-section">
+            <div class="output-box" id="outputBox">
+                <div class="output-content" id="outputContent">
+                    ここに牛さんのメッセージが表示されます...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('cowsayForm');
+        const messageInput = document.getElementById('messageInput');
+        const generateBtn = document.getElementById('generateBtn');
+        const outputBox = document.getElementById('outputBox');
+        const outputContent = document.getElementById('outputContent');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const message = messageInput.value.trim();
+            if (!message) return;
+
+            generateBtn.disabled = true;
+            generateBtn.textContent = '生成中...';
+            outputContent.textContent = '牛さんが準備中... 🐄';
+            outputContent.className = 'output-content loading';
+
+            try {
+                const response = await fetch('/say', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: new URLSearchParams({
+                        'params[input]': message
+                    })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    outputContent.textContent = data.message;
+                    outputContent.className = 'output-content';
+                    outputBox.className = 'output-box';
+                } else {
+                    throw new Error(data.error || 'エラーが発生しました');
+                }
+            } catch (error) {
+                outputContent.textContent = `エラー: ${error.message}`;
+                outputContent.className = 'output-content';
+                outputBox.className = 'output-box error';
+            } finally {
+                generateBtn.disabled = false;
+                generateBtn.textContent = '生成する';
+            }
+        });
+
+        messageInput.addEventListener('input', (e) => {
+            const remaining = 100 - e.target.value.length;
+            if (remaining < 20) {
+                e.target.style.borderColor = remaining < 5 ? '#dc3545' : '#ffc107';
+            } else {
+                e.target.style.borderColor = '#e1e5e9';
+            }
+        });
+
+        messageInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                form.dispatchEvent(new Event('submit'));
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+id: 001-login-as-admin
+name: login-as-admin
+description: |-
+  adminとしてログインして `/admin` にアクセスすればフラグがもらえるようですが、  
+  肝心のadminとしてログインする機能が存在していません。今すぐフラグが必要なのに困ります。
+
+  問題のゴール:
+
+  - adminとしてログインしているように見せかけて `/admin` にアクセスする
+flag: 'flag{adminmin_zemi_93f7105a}'
+points: 100
+attachments:
+  - ./dist-001.zip
+servers:
+  - type: url
+    url: https://...
+section:
+categories:
+  - web
+difficulty: warmup
+author: st98

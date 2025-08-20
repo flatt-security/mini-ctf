@@ -1,0 +1,21 @@
+id: 002-file-yomitaro
+name: 'file yomitaro'
+description: |-
+  ファイルを読めるWebアプリを作りました。  
+  対策をしているのでPath Traversalはできません。たぶん。
+
+  問題のゴール:
+
+  - 「対策」をバイパスして `/flag` を読み出す
+flag: 'flag{tiger_bar_monkey_29a4530e}'
+points: 100
+attachments:
+  - ./dist-002.zip
+servers:
+  - type: url
+    url: https://...
+section:
+categories:
+  - web
+difficulty: easy
+author: st98

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ファイル読み太郎</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ファイル読み太郎</h1>
+        
+        <div class="file-selector">
+            <label for="fileSelect">読み込むファイルを選択してください:</label>
+            <select id="fileSelect">
+                <option value="">-- ファイルを選択 --</option>
+                <option value="static/1.txt">1.txt</option>
+                <option value="static/2.txt">2.txt</option>
+                <option value="static/3.txt">3.txt</option>
+            </select>
+            
+            <button id="loadButton">ファイルを読み込む</button>
+        </div>
+        
+        <div id="content"></div>
+    </div>
+    
+    <script src="static/script.js"></script>
+</body>
+</html>

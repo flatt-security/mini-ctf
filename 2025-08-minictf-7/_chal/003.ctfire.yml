@@ -1,0 +1,20 @@
+id: 003-shaberu-ushi
+name: 'shaberu ushi'
+description: |-
+  人語を解する牛が発見されました。現地と中継がつながっています。
+
+  問題のゴール:
+
+  - `/readflag-(ランダムなhex)` を実行する
+flag: 'flag{mo-tan_b33a6590}'
+points: 100
+attachments:
+  - ./dist-003.zip
+servers:
+  - type: url
+    url: https://...
+section:
+categories:
+  - web
+difficulty: medium
+author: st98

@@ -1,0 +1,28 @@
+id: 004-helmet-anuki
+name: helmet-anuki
+description: |-
+  `Object.prototype` の任意のプロパティに任意の値を設定できます。つまり、Prototype Pollutionができます!  
+  [Helmet](https://github.com/helmetjs/helmet)というライブラリが `Content-Security-Policy` ヘッダを送出してくれますが、その値に `give me flag!` を含ませることはできるでしょうか。
+
+  TIPS:
+
+  - `options.abc` のようなプロパティアクセスで、`Object.prototype.abc` になんらかの値が入っており、かつ `options` 自身が `abc` というプロパティを持っていなかったとき、`Object.prototype.abc` の値が返ってきます。このような攻撃はPrototype Pollutionとよばれます
+  - Prototype Pollutionでプロトタイプを汚染することで悪用できるような便利なコード片は、`gadget` とよばれます
+  - Helmetに含まれるgadgetを探してみましょう
+  - **なお、`runner` は攻撃対象ではありません。このコンテナに対する攻撃は試みないでください**
+
+  問題のゴール:
+
+  - `Content-Security-Policy` の値に `give me flag!` を含ませる
+flag: 'flag{tanuki_should_be_in_the_zodiac_c7cfe870}'
+points: 100
+attachments:
+  - ./dist-004.zip
+servers:
+  - type: url
+    url: https://...
+section:
+categories:
+  - web
+difficulty: medium
+author: st98
